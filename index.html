@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Pong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🚀 Space Pong 🪐</h1>
+    <div id="startOverlay">
+        <button id="onePlayerBtn">1 Player</button>
+        <button id="twoPlayerBtn">2 Player</button>
+    </div>
+    <div id="difficultyOverlay" style="display:none;">
+        <div style="background:rgba(20,30,50,0.95);padding:40px 30px 30px 30px;border-radius:18px;box-shadow:0 0 40px #00f0ff55;display:inline-block;">
+            <h2 style="color:#00f0ff;margin-bottom:18px;letter-spacing:1px;">Choose Your Difficulty!</h2>
+            <button id="easyBtn">Easy</button>
+            <button id="mediumBtn">Hard</button>
+        </div>
+    </div>
+    <div id="abilityOverlay" style="display:none;">
+        <div style="background:rgba(20,30,50,0.97);padding:40px 30px 30px 30px;border-radius:18px;box-shadow:0 0 40px #00f0ff55;display:inline-block;">
+            <h2 style="color:#00f0ff;margin-bottom:10px;letter-spacing:1px;">Choose Your Ability!</h2>
+            <button id="blackHoleBtn" class="ability-btn" data-desc="Instantly suck the ball towards your paddle, catching the other player off guard">🕳️ Black Hole</button>
+            <button id="lightSpeedBtn" class="ability-btn" data-desc="After activating this ability, hitting the ball will increase the speed by 20%, then the speed will go back after the ball is received">⚡ LightSpeed</button>
+            <button id="reinforceBtn" class="ability-btn" data-desc="Your paddle becomes much larger, allowing you to return any ball that is hit towards you">🛡️ Space Reinforcement</button>
+        </div>
+    </div>
+    <div id="abilityTooltip" style="display:none;"></div>
+    <canvas id="pongCanvas" width="800" height="500"></canvas>
+    <script src="pong.js"></script>
+</body>
+</html>
